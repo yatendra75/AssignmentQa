@@ -11,13 +11,19 @@ import utilities.Locators;
 
 /**
  * @link FunctionsToDo
- * @description All TO DO Functions
+ * @description All Git Functions for challenge are defined here
  * @created Jul 8, 2020
  * @author yatenda.singh
  *
  */
 public class GitFunctions extends BaseEventHandler {
 
+  /**
+   * Description: Challenge #1:​ Repository Creation
+   * 
+   * @param enterRepositoryName : you want to create
+   * @return
+   */
   public boolean createRepository(String enterRepositoryName) {
     boolean status = false;
     mouseHoverAndClick(Locators.CREATEREPO_XPATH_DDP);
@@ -50,6 +56,9 @@ public class GitFunctions extends BaseEventHandler {
     }
   }
 
+  /**
+   * Description: To create dynamic xpath
+   */
   public String makeHrefXpath(String xpath, String replaceUser, String replaceWithUserName,
       String replaceRepo, String replaceWithRepoName) {
     xpath = xpath.replace(replaceUser, replaceWithUserName);
@@ -78,6 +87,11 @@ public class GitFunctions extends BaseEventHandler {
     }
   }
 
+  /**
+   * Description: Method to click on submit button to create issue
+   * 
+   * @return
+   */
   public boolean issueCreationSubmitButton() {
     WebElement submitButton = driver.findElement(By.xpath(Locators.SUBMIT_NEW_ISSUE_BUTTON_XPATH));
     try {
@@ -90,6 +104,13 @@ public class GitFunctions extends BaseEventHandler {
     }
   }
 
+  /**
+   * Description: To enter issue title, issue body and click on submit button
+   * 
+   * @param issueTitle : Name you want to give
+   * @param issueBody : Text you want to write
+   * @return
+   */
   public boolean enterIssueDetailsAndSubmitIssue(String issueTitle, String issueBody) {
     if (!ConstantsAndValues.ISSUE.ISSUE_TITLE.isEmpty()) {
       enterText("id", Locators.WRITE_ISSUE_TITLE_ID, issueTitle);
@@ -106,9 +127,11 @@ public class GitFunctions extends BaseEventHandler {
   }
 
   /**
-   * Description : Create an issue on Git hub​ in the repository created previously
+   * Description : Challenge #2:​ Issue Creation ( Create an issue on Git hub​ in the repository
+   * created previously)
    * 
-   * @param repoNameToSearch
+   * @param issueTitle : Issue Title you want to enter
+   * @param issueBody : Issue Body you want to enter
    * @return
    */
   public boolean issueCreation(String issueTitle, String issueBody) {
@@ -126,12 +149,24 @@ public class GitFunctions extends BaseEventHandler {
     }
   }
 
+  /**
+   * Description: Method for get Issue ID of created Issue (used in Challenge 2 and 4)
+   * 
+   * @return
+   */
   public String getIssueID() {
     String issueID = getText("className", Locators.GET_ISSUE_NUMBER_CLASS);
     System.out.println("Created issue id is : " + issueID);
     return issueID;
   }
 
+  /**
+   * Description: Common method for enter Title and body of issue with issue id
+   * 
+   * @param textToEnter : Enter text
+   * @param locator : Locator (xpath,id,class)
+   * @param issueID : Enter issue id
+   */
   public void enterNewIssueTitleOrBody(String textToEnter, String locator, String issueID) {
 
     WebElement element = findElement("id", locator);
@@ -141,8 +176,8 @@ public class GitFunctions extends BaseEventHandler {
   }
 
   /**
-   * Description : Create another issue on Git hub while mentioning previous issue in description
-   * and title
+   * Description : Challenge #2:​ (2) Create another issue on Git hub while mentioning previous
+   * issue in description and title
    * 
    * @return
    */
@@ -166,7 +201,11 @@ public class GitFunctions extends BaseEventHandler {
   }
 
   /**
-   * Challenge 3
+   * Description: Challenge #3:​ Comment to an Issue 
+   * 1. Add some comments to the issue created in challenge #2
+   * 
+   * @param enterCommentToAdd
+   * @return
    */
   public boolean addNewComment(String enterCommentToAdd) {
     try {
@@ -179,6 +218,13 @@ public class GitFunctions extends BaseEventHandler {
     }
   }
 
+  /**
+   * Description:Challenge #3:​ Comment to an Issue 
+   * 2. Add emoji in the repository created in challenge #1
+   * 
+   * @param enterEmojiValueToAdd : with defined code
+   * @return
+   */
   public boolean addEmojiInRepo(String enterEmojiValueToAdd) {
     try {
       enterText("id", Locators.NEW_COMMENT_FIELD_ID, enterEmojiValueToAdd);
@@ -193,8 +239,10 @@ public class GitFunctions extends BaseEventHandler {
   }
 
   /**
-   * challenge 4:​ Issue mention in comments link to Issue 1. Create a new comment and mention any
-   * of the previous issue (from challenge #2) 2. Navigate to the issue from the comment Issue
+   * challenge 4:​ Issue mention in comments link to Issue 
+   * 1. Create a new comment and mention any of the previous issue (from challenge #2)
+   * 2. Navigate to the issue from the comment Issue
+   *  
    */
   public boolean newCommentAndMentionPerivousIssueThenNavigateFromCommentIssue(
       String enterNewComment) {
