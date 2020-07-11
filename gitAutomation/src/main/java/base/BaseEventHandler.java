@@ -179,12 +179,17 @@ public class BaseEventHandler {
     return element.getText();
   }
 
-  // read data from property file
+  /**
+   * Description: This method is used for reading data from property file
+   * 
+   * @param variable : Variable name you want to read
+   * @param propertyFileName : Property file name with extension from which you want to read data
+   * @return
+   */
   public String readFromProperty(String variable, String propertyFileName) {
     Properties props = new Properties();
     InputStream is = null;
     String path = System.getProperty("user.dir") + "\\src\\main\\resources\\";
-    // First try loading from the current directory
     try {
       File f = new File(path + propertyFileName);
       is = new FileInputStream(f);
@@ -193,10 +198,8 @@ public class BaseEventHandler {
     }
     try {
       if (is == null) {
-        // Try loading from classpath
         is = getClass().getResourceAsStream(path + propertyFileName);
       }
-      // Try loading properties from the file (if found)
       props.load(is);
     } catch (Exception e) {
       System.out.println("readFromProperty" + e.getMessage());
@@ -213,6 +216,14 @@ public class BaseEventHandler {
   }
 
   // write data in property file
+  /**
+   * Description: To write data into property file this method will be used
+   * 
+   * @param variable :Variable name you want value to write
+   * @param value : Value you want to write in front of variable name
+   * @param propertyFileName : Property file name with extension in which you want to write data
+   * @return
+   */
   public String writeProperty(String variable, String value, String propertyFileName) {
     Properties props = new Properties();
     OutputStream output = null;
