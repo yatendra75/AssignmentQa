@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="6" total="8" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="45288" started-at="2020-07-11T06:58:25 IST" finished-at="2020-07-11T06:59:11 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="45288" started-at="2020-07-11T06:58:25 IST" finished-at="2020-07-11T06:59:11 IST">
+      <class name="testcases.GitFunctionsTest">
+        <test-method status="PASS" signature="BasePageNavigation()[pri:0, instance:testcases.GitFunctionsTest@2781e022]" name="BasePageNavigation" is-config="true" duration-ms="9031" started-at="2020-07-11T06:58:16 IST" finished-at="2020-07-11T06:58:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BasePageNavigation -->
+        <test-method status="PASS" signature="init()[pri:0, instance:testcases.GitFunctionsTest@2781e022]" name="init" is-config="true" duration-ms="0" started-at="2020-07-11T06:58:25 IST" finished-at="2020-07-11T06:58:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="verifyLogInUserTest()[pri:0, instance:testcases.GitFunctionsTest@2781e022]" name="verifyLogInUserTest" duration-ms="3971" started-at="2020-07-11T06:58:25 IST" finished-at="2020-07-11T06:58:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogInUserTest -->
+        <test-method status="PASS" signature="verifyDeleteRepositoryTest()[pri:6, instance:testcases.GitFunctionsTest@2781e022]" name="verifyDeleteRepositoryTest" duration-ms="41254" started-at="2020-07-11T06:58:29 IST" depends-on-methods="testcases.GitFunctionsTest.verifyLogInUserTest" finished-at="2020-07-11T06:59:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteRepositoryTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.GitFunctionsTest@2781e022]" name="teardown" is-config="true" duration-ms="754" started-at="2020-07-11T06:59:11 IST" finished-at="2020-07-11T06:59:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.GitFunctionsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
