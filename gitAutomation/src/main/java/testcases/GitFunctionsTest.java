@@ -1,6 +1,3 @@
-/**
- * 
- */
 package testcases;
 
 import org.testng.Assert;
@@ -12,7 +9,7 @@ import utilities.ConstantsAndValues;
 
 /**
  * @link LoginPageTest
- * @description
+ * @description : All test cases for Git automation mentioned here
  * @created Jul 8, 2020
  * @author yatendra.singh
  *

@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package pages;
 
 import org.openqa.selenium.By;
@@ -201,8 +199,8 @@ public class GitFunctions extends BaseEventHandler {
   }
 
   /**
-   * Description: Challenge #3:​ Comment to an Issue 
-   * 1. Add some comments to the issue created in challenge #2
+   * Description: Challenge #3:​ Comment to an Issue 1. Add some comments to the issue created in
+   * challenge #2
    * 
    * @param enterCommentToAdd
    * @return
@@ -219,8 +217,8 @@ public class GitFunctions extends BaseEventHandler {
   }
 
   /**
-   * Description:Challenge #3:​ Comment to an Issue 
-   * 2. Add emoji in the repository created in challenge #1
+   * Description:Challenge #3:​ Comment to an Issue 2. Add emoji in the repository created in
+   * challenge #1
    * 
    * @param enterEmojiValueToAdd : with defined code
    * @return
@@ -239,10 +237,9 @@ public class GitFunctions extends BaseEventHandler {
   }
 
   /**
-   * challenge 4:​ Issue mention in comments link to Issue 
-   * 1. Create a new comment and mention any of the previous issue (from challenge #2)
-   * 2. Navigate to the issue from the comment Issue
-   *  
+   * challenge 4:​ Issue mention in comments link to Issue 1. Create a new comment and mention any
+   * of the previous issue (from challenge #2) 2. Navigate to the issue from the comment Issue
+   * 
    */
   public boolean newCommentAndMentionPerivousIssueThenNavigateFromCommentIssue(
       String enterNewComment) {
