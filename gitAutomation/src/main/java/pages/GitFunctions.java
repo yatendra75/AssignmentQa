@@ -283,6 +283,7 @@ public class GitFunctions extends BaseEventHandler {
       String value = userName + "/" + repoNameToDelete;
       enterText("xpath", Locators.ENTER_ABOVE_VALUE_TO_CONFIRM_TEXTBOX, value);
       clickElement("xpath", Locators.DELETE_THE_REPO_BUTTON);
+      System.out.println("Repository deleted successfully.");
       return status = true;
     } catch (InterruptedException e) {
       System.out.println("Unable to find Delete Repo element!");
