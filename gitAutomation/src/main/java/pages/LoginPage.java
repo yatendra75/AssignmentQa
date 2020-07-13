@@ -2,7 +2,6 @@
 package pages;
 
 import base.BaseEventHandler;
-import utilities.ConstantsAndValues;
 import utilities.Locators;
 
 /**
@@ -14,9 +13,9 @@ import utilities.Locators;
  */
 public class LoginPage extends BaseEventHandler {
 
-  public boolean login() {
-    enterText("id", Locators.LOGIN_FIELD_ID, ConstantsAndValues.LOGINDETAILS.USERID);
-    enterText("id", Locators.PASSWORD_FIELD_ID, ConstantsAndValues.LOGINDETAILS.PASSWORD);
+  public boolean login(String userName, String password) {
+    enterText("id", Locators.LOGIN_FIELD_ID, userName);
+    enterText("id", Locators.PASSWORD_FIELD_ID, password);
     return clickElement("xpath", Locators.LOGIN_BUTTON_XAPTH);
   }
 }

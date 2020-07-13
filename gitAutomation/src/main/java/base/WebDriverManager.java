@@ -44,8 +44,6 @@ public final class WebDriverManager {
             System.setProperty(driverExecutable,
                 path + ConstantsAndValues.DRIVERDETAILS.DRIVER_LOCATION);
             driver = new ChromeDriver();
-            driver.get(ConstantsAndValues.LOGINDETAILS.SITE_URL);
-            driver = new ChromeDriver();
             System.out.println("Driver Initialized");
             DesiredCapabilities capability = new DesiredCapabilities();
             capability = DesiredCapabilities.chrome();

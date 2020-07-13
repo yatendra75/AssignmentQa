@@ -12,9 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import utilities.ConstantsAndValues;
 
 /**
  * @link BaseEventHandler
@@ -29,17 +27,6 @@ public class BaseEventHandler {
   WebElement element;
 
   /**
-   * Description: Driver initializer
-   */
-  public static void initializeDriver() {
-    String path = System.getProperty("user.dir");
-    System.setProperty("webdriver.chrome.driver",
-        path + ConstantsAndValues.DRIVERDETAILS.DRIVER_LOCATION);
-    driver = new ChromeDriver();
-    driver.get(ConstantsAndValues.LOGINDETAILS.SITE_URL);
-  }
-
-  /**
    * Description: To Find element by diffrent locators
    * 
    * @param type
@@ -52,7 +39,6 @@ public class BaseEventHandler {
           element = driver.findElement(By.id(locator));
           break;
         case "xpath":
-          // explicitWait(10, "presence", locator);
           element = driver.findElement(By.xpath(locator));
           break;
         case "name":
@@ -212,7 +198,6 @@ public class BaseEventHandler {
     return value;
   }
 
-  // write data in property file
   /**
    * Description: To write data into property file this method will be used
    * 

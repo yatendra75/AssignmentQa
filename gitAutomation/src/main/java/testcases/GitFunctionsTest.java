@@ -28,7 +28,8 @@ public class GitFunctionsTest extends TestBase {
   @Test(enabled = true)
   public void verifyLogInUserTest() {
     System.out.println("TC: Log in with user test started");
-    Assert.assertTrue(loginPage.login());
+    Assert.assertTrue(loginPage.login(ConstantsAndValues.LOGINDETAILS.USERID,
+        ConstantsAndValues.LOGINDETAILS.PASSWORD));
   }
 
   @Test(enabled = true, dependsOnMethods = {"verifyLogInUserTest"}, priority = 1)
