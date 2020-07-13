@@ -127,9 +127,13 @@ public class BaseEventHandler {
    * @throws InterruptedException
    */
   public void moveToElementAndClick(WebElement element) throws InterruptedException {
-    Actions actions = new Actions(driver);
-    actions.moveToElement(element);
-    actions.click().perform();
+    try {
+      Actions actions = new Actions(driver);
+      actions.moveToElement(element);
+      actions.click().perform();
+    } catch (Exception e) {
+      System.out.println("element not found:" + e.getMessage());
+    }
   }
 
   /**
