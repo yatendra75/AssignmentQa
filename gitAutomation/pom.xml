@@ -17,7 +17,7 @@
 		<selenium-java>3.141.59</selenium-java>
 		<testng>7.1.0</testng>
 		<extentreports>4.0.9</extentreports>
-		<commons.io>2.6</commons.io>
+		<commons.io>2.7</commons.io>
 		<commons.lang3>3.10</commons.lang3>
 	</properties>
 
